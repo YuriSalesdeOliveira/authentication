@@ -2,8 +2,19 @@
 
 define('DEVELOPMENT', $_SERVER['SERVER_NAME'] === 'localhost' ? true : false);
 
+define('LANGUAGE', 'pt-br');
+
 define('SITE', [
     'root' => 'http://localhost/authentication/back'
+]);
+
+define('PATH', [
+    'public' => '',
+    'view' => '',   
+    'cache' => '',
+    'language' => dirname(__DIR__) . '/language',
+    'config' => '',
+    'storage' => ''
 ]);
 
 define("DATA_BASE_CONFIG", [

@@ -1,4 +1,5 @@
 import { Api } from "./Api.js";
+import redirect from "./Redirect.js"
 
 let api = new Api('http://localhost/authentication/back/api')
 
@@ -15,7 +16,19 @@ form.addEventListener('submit', (e) => {
 
     formData.append('email', email)
     formData.append('password', password)
-    // verificar retorno e executar os caminhos
-    api.post('/login', formData).then(console.log)
+
+    api.post('/login', formData).then(data => {
+
+        if (data.status) { redirect('/profile') }
+
+        const errors = data.errors
+
+        if (errors.type === 'validation') {
+
+            console.log(errors.data)
+
+        }
+
+    })
 
 })
