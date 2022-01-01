@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.input { @apply relative h-[48px] }
+
+.input > label { @apply hidden }
+
+.input > input{
+    @apply w-full h-full border border-gray-300 rounded-[10px] outline-none pl-2 z-20 
+}
+
+.input > input:placeholder-shown ~ label {
+    @apply absolute flex items-center left-2 top-1/2 -translate-y-1/2 z-0 text-sm text-gray-500
+}
+
+.input > input:focus ~ label { @apply hidden }

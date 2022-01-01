@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.tailwind.css">
+    <title>Authentication</title>
+</head>
+<body class="font-sans w-screen h-screen flex justify-center items-center">
+
+    <div class="w-[430px] border border-gray-300 rounded-[18px] px-[45px] py-[40px]">
+
+        <img class="mb-[20px]" src="assets/images/svg/devchallenges.svg" alt="">
+
+        <h1 class="w-[300px] font-semibold text-base mb-[10px]">Join thousands of learners from around the world</h1>
+
+        <p class="w-[300px] text-sm mb-[30px]">
+            Master web development by making real-life
+            projects. There are multiple paths for you to
+            choose
+        </p>
+
+        <form class="flex flex-col mb-5" action="#" method="post">
+
+            <div class="input w-full mb-3">
+                <input type="email" name="email" id="email" placeholder=" ">
+                <label for="email">
+                    <img class="mr-2" src="assets/images/svg/email_black_24dp.svg" alt="email">
+                    E-mail
+                </label>
+            </div>
+
+            <div class="input w-full mb-5">
+                <input type="password" name="password" id="password" placeholder=" ">
+                <label for="password">
+                    <img class="mr-2" src="assets/images/svg/lock_black_24dp.svg" alt="lock">
+                    Senha
+                </label>
+            </div>
+
+            <button class="w-full p-1 text-white bg-blue-500 rounded-[10px] hover:bg-blue-600" type="submit">Start coding now</button>
+
+        </form>
+
+        <span class="flex justify-center text-xs text-gray-500 mb-5">or continue with these social profile</span>
+
+        <div class="w-3/5 flex justify-around mx-auto mb-5">
+
+            <a href=""><img src="assets/images/svg/Google.svg" alt=""></a>
+            <a href=""><img src="assets/images/svg/Facebook.svg" alt=""></a>
+            <a href=""><img src="assets/images/svg/Twitter.svg" alt=""></a>
+            <a href=""><img src="assets/images/svg/Gihub.svg" alt=""></a>
+
+        </div>
+            
+        <span class="flex justify-center text-xs text-gray-500">
+            Adready a member? <a class="text-blue-500 ml-1 hover:underline" href="#">Login</a>
+        </span>
+
+    </div>
+
+    <script type="module" src="assets/js/index.js"></script>
+
+</body>
+</html>
