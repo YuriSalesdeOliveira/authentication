@@ -1,5 +1,5 @@
 import { Api } from "./Api.js";
-import redirect from "./Redirect.js"
+import { redirect } from "./Redirect.js"
 
 let api = new Api('http://localhost/authentication/back/api')
 
@@ -19,14 +19,13 @@ form.addEventListener('submit', (e) => {
 
     api.post('/login', formData).then(data => {
 
-        if (data.status) { redirect('/profile') }
+        if (data.status) { redirect('profile') }
 
         const errors = data.errors
 
         if (errors.type === 'validation') {
 
             console.log(errors.data)
-
         }
 
     })
