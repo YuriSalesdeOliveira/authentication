@@ -1,7 +1,9 @@
-import { Api } from "./Api.js";
-import { redirect } from "./Redirect.js"
+import { Api } from "./Api.js"
+import { Config } from "./Config.js"
+import { Redirect } from "./Redirect.js"
 
-let api = new Api('http://localhost/authentication/back/api')
+let api = new Api(Config.api.root)
+let redirect = new Redirect(Config.site.root)
 
 const form = document.querySelector('form')
 
@@ -19,7 +21,7 @@ form.addEventListener('submit', (e) => {
 
     api.post('/login', formData).then(data => {
 
-        if (data.status) { redirect('profile') }
+        if (data.status) { redirect.to('/profile.html') }
 
         const errors = data.errors
 

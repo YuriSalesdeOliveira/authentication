@@ -1,4 +1,12 @@
-export function redirect(endpoint, extension = 'html')
+export class Redirect
 {
-    window.location = `http://localhost/authentication/front/public/${endpoint}.${extension}`
+    constructor(base_url = null)
+    {
+        this.base_url = base_url
+    }
+
+    to(path_or_url)
+    {
+        window.location = this.base_url + path_or_url
+    }
 }

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.tailwind.css">
+    <title>Authentication</title>
+</head>
+<body>
+    <header class="w-full mb-5">
+
+        <div class="w-[1300px] h-[75px] mx-auto flex justify-between items-center">
+            <img class="mb-[20px]" src="assets/images/svg/devchallenges.svg" alt="logo">
+
+            <div class="relative">
+                <a href="javascript:" class="flex items-center">
+                    <img class="rounded-lg mr-3" src="assets/images/person4.png" width="35px" alt="person">
+        
+                    <span class="font-bold text-xs mr-2">Yuri Oliveira</span>
+
+                    <img src="assets/images/svg/arrow_drop_down_black_24dp.svg" alt="arrow">
+                </a>
+        
+                <nav class="absolute hidden">
+                    <a href="#">My Profile</a>
+                    <a href="#">Group Chat</a>
+                    <a href="#">Logout</a>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="w-[795px] mx-auto">
+            <a href="" class="flex items-center text-[#2d9cdb]">
+                <img class="mr-2" src="assets/images/svg/arrow_back_ios_black_24dp.svg" alt="arrow">
+                Back
+            </a>
+        </div>
+        <div class="w-[795px] mx-auto border rounded-lg overflow-hidden">
+            <header class="w-full h-[100px] flex justify-between items-center px-12">
+                <div class="flex flex-col">
+                    <h3 class="text-xl">Change Info</h3>
+                    <p class="text-xs text-gray-500 font-medium">Changes will be reflected to every services</p>
+                </div>
+            </header>
+            <form action="#" method="post" enctype="multipart/form-data"
+                class="flex flex-col items-start">
+
+                <div class="flex items-center">
+                    <label for="photo" class="cursor-pointer">
+                        <img class="mr-5 rounded-lg" src="assets/images/person4.png" width="70px" alt="person">
+                    </label>
+                    <input type="file" name="photo" id="photo" class="hidden">
+                </div>
+
+                <label for="name">Name</label>
+                <input type="text" name="name">
+
+                <label for="bio">Bio</label>
+                <input type="text" name="bio">
+
+                <label for="phone">Phone</label>
+                <input type="text" name="phone">
+
+                <label for="email">Email</label>
+                <input type="text" name="email">
+
+                <label for="password">Password</label>
+                <input type="text" name="password">
+
+                <button type="submit">Save</button>
+                
+            </form>
+        </div>
+    </main>
+
+    <script type="module" src="assets/js/profileEdit.js"></script>
+
+</body>
+</html>

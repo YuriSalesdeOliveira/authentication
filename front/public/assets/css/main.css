@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    @apply font-sans
+}
+
 .input { @apply relative h-[48px] }
 
 .input > label { @apply hidden }
@@ -15,3 +19,19 @@
 }
 
 .input > input:focus ~ label { @apply hidden }
+
+.table-profile {
+    @apply w-full
+}
+
+.table-profile tr {
+    @apply border-b
+}
+
+.table-profile tr > :first-child {
+    @apply uppercase text-xs text-gray-500 px-12
+}
+
+.table-profile tr > :nth-child(2){
+    @apply py-4 text-base
+}
