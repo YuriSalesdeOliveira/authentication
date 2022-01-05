@@ -10,6 +10,7 @@ class Validate
     private Message $message;
 
     private array $data_to_validate;
+    private array $rules;
     private array $errors = [];
 
     public function __construct(array $data_to_validate)
@@ -21,18 +22,20 @@ class Validate
 
     public function validate(array $rules)
     {
+        $this->rules = $rules;
+
         foreach ($this->data_to_validate as $key => $value) {
 
             if (array_key_exists($key, $rules)) {
 
-                $this->execute($key, $value, $rules[$key]);
+                $this->execute($key, $value);
             }
         }
     }
 
-    protected function execute(string $key, string $value, array $rules)
+    protected function execute(string $key, mixed $value)
     {
-        $standardized_rules = $this->standardizeRules($rules);
+        $standardized_rules = $this->standardizeRules($this->rules[$key]);
 
         foreach ($standardized_rules as $method => $parameter) {
 
@@ -85,10 +88,27 @@ class Validate
         return true;
     }
 
-
-    protected function required($key, $value): bool|string
+    protected function optional($key, $value)
     {
-        if (empty($value)) return $this->message->get('required', attribute: $key);
+        if (empty($value)) $this->rules[$key] = [];
+    }
+
+    protected function required($key, $value, ?string $type = null): bool|string
+    {
+        switch ($type) {
+
+            case 'file':
+                
+                if (!$value['size']) return $this->message->get('required', attribute: $key);
+
+            break;
+
+            case null:
+
+                if (empty($value)) return $this->message->get('required', attribute: $key);
+
+            break;
+        }
 
         return true;
     }
