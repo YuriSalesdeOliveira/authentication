@@ -35,3 +35,23 @@ html {
 .table-profile tr > :nth-child(2){
     @apply py-4 text-base
 }
+
+.form-profile-edit {
+    @apply w-full flex flex-col items-start px-12
+}
+
+.form-profile-edit > label {
+    @apply text-xs font-medium
+}
+
+.form-profile-edit > input {
+    @apply w-1/2 h-[45px] text-xs px-4 mb-5 rounded-lg border border-gray-400
+}
+
+.form-profile-edit > textarea {
+    @apply w-1/2 h-[90px] text-xs pt-3 px-4 mb-5 rounded-lg border border-gray-400
+}
+
+.form-profile-edit > button[type="submit"] {
+    @apply px-5 py-2 text-sm text-white bg-blue-600 mb-12 rounded-md
+}

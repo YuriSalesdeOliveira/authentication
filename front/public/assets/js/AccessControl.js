@@ -2,8 +2,8 @@ import { Api } from "./Api.js"
 import { Config } from "./Config.js"
 import { Redirect } from "./Redirect.js"
 
-let api = new Api(Config.api.root)
-let redirect = new Redirect(Config.site.root)
+const api = new Api(Config.api.root)
+const redirect = new Redirect(Config.site.root)
 
 export class AccessControl
 {

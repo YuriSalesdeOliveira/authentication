@@ -14,7 +14,7 @@ define('PATH', [
     'cache' => '',
     'language' => dirname(__DIR__) . '/language',
     'config' => '',
-    'storage' => ''
+    'storage' => dirname(__DIR__) . '/storage',
 ]);
 
 define("DATA_BASE_CONFIG", [

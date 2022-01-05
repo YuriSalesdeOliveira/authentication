@@ -32,9 +32,9 @@
 
     </header>
 
-    <main>
-        <div class="w-[795px] mx-auto">
-            <a href="" class="flex items-center text-[#2d9cdb]">
+    <main class="mb-12">
+        <div class="w-[795px] mx-auto mb-5">
+            <a href="javascript:" id="redirect-profile" class="flex items-center text-[#2d9cdb]">
                 <img class="mr-2" src="assets/images/svg/arrow_back_ios_black_24dp.svg" alt="arrow">
                 Back
             </a>
@@ -47,29 +47,32 @@
                 </div>
             </header>
             <form action="#" method="post" enctype="multipart/form-data"
-                class="flex flex-col items-start">
+                class="form-profile-edit">
 
-                <div class="flex items-center">
-                    <label for="photo" class="cursor-pointer">
-                        <img class="mr-5 rounded-lg" src="assets/images/person4.png" width="70px" alt="person">
+                <div class="flex items-center mb-6">
+                    <label for="photo" class="flex items-center">
+                        <img id="form-photo-preview" class="w-[70px] h-[70px] mr-5 rounded-lg cursor-pointer"
+                            src="assets/images/person4.png" alt="person">
+
+                        <span class="text-xs text-gray-500 uppercase cursor-pointer">change photo</span>
                     </label>
                     <input type="file" name="photo" id="photo" class="hidden">
                 </div>
 
                 <label for="name">Name</label>
-                <input type="text" name="name">
+                <input type="text" name="name" placeholder="Enter your name...">
 
                 <label for="bio">Bio</label>
-                <input type="text" name="bio">
+                <textarea name="bio" placeholder="Enter your bio..."></textarea>
 
                 <label for="phone">Phone</label>
-                <input type="text" name="phone">
+                <input type="text" name="phone" placeholder="Enter your phone...">
 
                 <label for="email">Email</label>
-                <input type="text" name="email">
+                <input type="text" name="email" placeholder="Enter your email...">
 
                 <label for="password">Password</label>
-                <input type="text" name="password">
+                <input type="text" name="password" placeholder="Enter your new password...">
 
                 <button type="submit">Save</button>
                 

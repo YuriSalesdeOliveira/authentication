@@ -2,22 +2,16 @@ import { Api } from "./Api.js"
 import { Config } from "./Config.js"
 import { Redirect } from "./Redirect.js"
 
-let api = new Api(Config.api.root)
-let redirect = new Redirect(Config.site.root)
+const api = new Api(Config.api.root)
+const redirect = new Redirect(Config.site.root)
 
 const form = document.querySelector('form')
 
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', function(e) {
     
     e.preventDefault()
 
-    let formData = new FormData(this)
-
-    const email = document.querySelector('input[type="email"]').value
-    const password = document.querySelector('input[type="password"]').value
-
-    formData.append('email', email)
-    formData.append('password', password)
+    const formData = new FormData(this)
 
     api.post('/login', formData).then(data => {
 

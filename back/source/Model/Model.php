@@ -35,9 +35,9 @@ abstract class Model
         return false;
     }
 
-    public static function removeById(string $id): bool
+    public static function removeByFilters(array $filters): bool
     {
-        return (new static)->delete(['id' => $id]);
+        return (new static)->delete($filters);
     }
 
     protected function delete(array $filters): bool
