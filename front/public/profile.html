@@ -14,7 +14,7 @@
             <img class="mb-[20px]" src="assets/images/svg/devchallenges.svg" alt="logo">
 
             <div class="relative">
-                <a href="javascript:" class="flex items-center">
+                <a href="javascript:" id="dropdown-button" class="flex items-center">
                     <img class="rounded-lg mr-3" src="assets/images/person4.png" width="35px" alt="person">
         
                     <span class="font-bold text-xs mr-2">Yuri Oliveira</span>
@@ -22,10 +22,11 @@
                     <img src="assets/images/svg/arrow_drop_down_black_24dp.svg" alt="arrow">
                 </a>
         
-                <nav class="absolute hidden">
-                    <a href="#">My Profile</a>
-                    <a href="#">Group Chat</a>
-                    <a href="#">Logout</a>
+                <nav class="absolute w-[190px] hidden flex-col bottom-0 translate-y-[115%]
+                    px-2 py-4 border rounded-lg shadow-md" id="dropdown-content">
+                    <a href="#" class="text-sm px-5 py-2 bg-gray-300 rounded-lg">My Profile</a>
+                    <a href="#" class="text-sm px-5 py-2 border-b">Group Chat</a>
+                    <a href="javascript:" id="logout" class="text-sm text-red-500 px-5 py-2">Logout</a>
                 </nav>
             </div>
         </div>
@@ -69,6 +70,7 @@
     </main>
 
     <script type="module" src="assets/js/profile.js"></script>
+    <script src="assets/js/dropdown.js"></script>
 
 </body>
 </html>

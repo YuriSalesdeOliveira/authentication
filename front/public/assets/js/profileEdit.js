@@ -14,6 +14,13 @@ buttonBack.addEventListener('click', () => {
     redirect.to('/profile.html')
 })
 
+const buttonLogout = document.querySelector('#logout')
+buttonLogout.addEventListener('click', () => {
+    api.get('/login/logout').then(data => {
+        if (data.status) { redirect.to('/index.html') }
+    })
+})
+
 const photo = document.querySelector('input[name="photo"]')
 
 photo.addEventListener('change', function() {
