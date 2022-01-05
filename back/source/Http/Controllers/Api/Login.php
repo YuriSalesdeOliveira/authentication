@@ -23,7 +23,7 @@ class Login extends Controller
 
             echo json_encode([
                 'status' => false,
-                'errors' => [
+                'error' => [
                     'type' => 'validation',
                     'data' => $errors
                 ]
@@ -41,7 +41,7 @@ class Login extends Controller
 
             echo json_encode([
                 'status' => false,
-                'errors' => [
+                'error' => [
                     'type' => 'validation',
                     'data' => [
                         'login' => 'Email e Senha não conferem'
@@ -55,7 +55,7 @@ class Login extends Controller
         echo json_encode([
             'status' => true,
             'data' => [
-                'user_id' => ModelLogin::user()->id
+                'logged_user_id' => ModelLogin::user()->id
             ]
         ]);
     }
@@ -90,10 +90,10 @@ class Login extends Controller
 
         echo json_encode([
             'status' => false,
-            'errors' => [
-                'type' => 'logout',
+            'error' => [
+                'type' => 'validation',
                 'data' => [
-                    'logged' => 'Usuário não está logado'
+                    'logout' => 'Usuário não está logado'
                 ]
             ]
         ]);
