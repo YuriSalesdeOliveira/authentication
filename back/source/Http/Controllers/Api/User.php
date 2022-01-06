@@ -84,40 +84,56 @@ class User extends Controller
             return;
         }
 
-        $validate = new Validate($data + $_FILES);
+        $validate = new Validate($_FILES + $data);
 
         $validate->validate([
-            'photo' => ['required:file'],
             'name' => ['required'],
-            'bio' => ['required', 'max:500'],
+            'bio' => ['max:500', 'required'],
             'phone' => ['required'],
-            'email' => ['required', 'email'],
+            'email' => ['email', 'required'],
             'password' => ['optional', 'min:8']
         ]);
-        return;
-        $upload = new Image(PATH['storage'] . '/images');
-    
-        $uploaded = $upload->upload($_FILES['photo']);
-
-        if (!$uploaded) {
+        print_r($validate->errors());
+        if ($errors = $validate->errors()) {
 
             echo json_encode([
                 'status' => false,
                 'error' => [
-                    'type' => 'upload',
-                    'data' => $upload->errors()
+                    'type' => 'validation',
+                    'data' => $errors
                 ]
             ]);
 
             return;
         }
+        return;
+        if (!empty($_FILES['photo'])) {
 
-        $user->photo = $uploaded;
+            $upload = new Image(PATH['storage'] . '/images');
+    
+            $uploaded = $upload->upload($_FILES['photo']);
+
+            if (!$uploaded) {
+
+                echo json_encode([
+                    'status' => false,
+                    'error' => [
+                        'type' => 'upload',
+                        'data' => $upload->errors()
+                    ]
+                ]);
+
+                return;
+            }
+
+            $user->photo = $uploaded;
+        }
+
         $user->name = $data['name'];
         $user->bio = $data['bio'];
         $user->phone = $data['phone'];
         $user->email = $data['email'];
-        $user->password = password_hash($data['password'], PASSWORD_DEFAULT);
+        if ($data['password']) $user->password = password_hash($data['password'], PASSWORD_DEFAULT);
 
         // $user->save();
 
