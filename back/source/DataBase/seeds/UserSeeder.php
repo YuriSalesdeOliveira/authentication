@@ -9,10 +9,15 @@ class UserSeeder extends AbstractSeed
     {
         $data = [
             [
+                'photo' => 'https://media.licdn.com/media/AAYQAQSOAAgAAQAAAAAAAB-zrMZEDXI2T62PSuT6kpB6qg.png',
                 'name' => 'Yuri Oliveira',
+                'bio' => 'Eu penso que, se a maior parte
+                    da minha vida eu irei passar trabalhando,
+                    quero trabalhar com algo que eu goste.',
+                'phone' => '73999952178',
                 'email' => 'yuri_oli@hotmail.com',
                 'password' => password_hash('nomedamamae', PASSWORD_DEFAULT),
-                'is_admin' => 1
+                
             ]
         ];
 
