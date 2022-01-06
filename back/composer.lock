@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "281e2df2877bf60a694e88dfa57d6f9e",
+    "content-hash": "b48491424e782ac47cb4dbd30b6942df",
     "packages": [
         {
             "name": "cakephp/core",
@@ -1206,12 +1206,56 @@
                 }
             ],
             "time": "2021-05-21T13:25:03+00:00"
+        },
+        {
+            "name": "yuri-oliveira/validate",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/YuriSalesdeOliveira/yuri-oliveira-validate.git",
+                "reference": "6b9ddf801947238d83483ec3d4c67d7ab5af103d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/YuriSalesdeOliveira/yuri-oliveira-validate/zipball/6b9ddf801947238d83483ec3d4c67d7ab5af103d",
+                "reference": "6b9ddf801947238d83483ec3d4c67d7ab5af103d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "YuriOliveira\\Validation\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Yuri Sales de Oliveira",
+                    "email": "yuri_oli@hotmail.com",
+                    "homepage": "https://www.facebook.com/profile.php?id=100052262689312"
+                }
+            ],
+            "description": "Package para fazer validação",
+            "support": {
+                "issues": "https://github.com/YuriSalesdeOliveira/yuri-oliveira-validate/issues",
+                "source": "https://github.com/YuriSalesdeOliveira/yuri-oliveira-validate/tree/master"
+            },
+            "time": "2022-01-06T05:36:29+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "yuri-oliveira/validate": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
