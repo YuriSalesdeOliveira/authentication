@@ -91,9 +91,9 @@ class User extends Controller
             'bio' => ['max:500', 'required'],
             'phone' => ['required'],
             'email' => ['email', 'required'],
-            'password' => ['optional', 'min:8']
+            'password' => ['c_filled', 'min:8']
         ]);
-        print_r($validate->errors());
+        
         if ($errors = $validate->errors()) {
 
             echo json_encode([
@@ -106,8 +106,8 @@ class User extends Controller
 
             return;
         }
-        return;
-        if (!empty($_FILES['photo'])) {
+        
+        if (isset($_FILES['photo']) && $_FILES['photo']['size']) {
 
             $upload = new Image(PATH['storage'] . '/images');
     
@@ -133,9 +133,9 @@ class User extends Controller
         $user->bio = $data['bio'];
         $user->phone = $data['phone'];
         $user->email = $data['email'];
-        if ($data['password']) $user->password = password_hash($data['password'], PASSWORD_DEFAULT);
 
-        // $user->save();
+        if (!empty($data['password'])) $user->password = password_hash($data['password'], PASSWORD_DEFAULT);
+        
 
         echo json_encode([
             'status' => true,

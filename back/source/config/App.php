@@ -17,6 +17,8 @@ define('PATH', [
     'storage' => dirname(__DIR__) . '/storage',
 ]);
 
+define('MESSAGES_FILE_PATH', PATH['language'] . '/pt-br/validate.php');
+
 define("DATA_BASE_CONFIG", [
 
     'default_environment' => 'development',
