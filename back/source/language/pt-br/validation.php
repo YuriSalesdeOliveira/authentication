@@ -26,7 +26,8 @@ return [
         'name' => 'nome',
         'email' => 'e-mail',
         'password' => 'senha',
-        'photo' => 'foto'
+        'photo' => 'foto',
+        'phone' => 'telefone'
     ],
 
 ];
