@@ -136,12 +136,23 @@ class User extends Controller
 
         if (!empty($data['password'])) $user->password = password_hash($data['password'], PASSWORD_DEFAULT);
         
+        if (!$user->save()) {
+            echo json_encode([
+                'status' => false,
+                'error' => [
+                    'type' => 'update',
+                    'data' => $user->error()
+                ]
+            ]);
+
+            return;
+        }
 
         echo json_encode([
             'status' => true,
             'data' => [
-                'teste' => $user->getAttributes()
-                // 'update' => 'Usuário atualizado com sucesso'
+                'teste' => $user->getAttributes(),
+                'update' => 'Usuário atualizado com sucesso'
             ]
         ]);
 
