@@ -3,7 +3,7 @@
 namespace Source\Http\Controllers\Api;
 
 use Source\Model\Login as ModelLogin;
-use Source\Support\Validate;
+use YuriOliveira\Validation\Validate;
 use Source\Http\Controllers\Controller;
 
 class Login extends Controller

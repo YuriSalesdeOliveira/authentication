@@ -6,8 +6,8 @@ use Source\Model\Login;
 use CoffeeCode\Router\Router;
 use Source\Support\Upload\Image;
 use Source\Model\User as ModelUser;
+use YuriOliveira\Validation\Validate;
 use Source\Http\Controllers\Controller;
-use Source\Support\Validate;
 
 class User extends Controller
 {
