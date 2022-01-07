@@ -84,13 +84,13 @@ class User extends Controller
             return;
         }
 
+        // Fazer a validação de telefone quando existir
+
         $validate = new Validate($_FILES + $data);
 
         $validate->validate([
-            'name' => ['required'],
-            'bio' => ['max:500', 'required'],
-            'phone' => ['required'],
-            'email' => ['email', 'required'],
+            'bio' => ['c_filled', 'max:500'],
+            'email' => ['c_filled', 'email'],
             'password' => ['c_filled', 'min:8']
         ]);
         
@@ -125,18 +125,17 @@ class User extends Controller
 
                 return;
             }
-
-            $user->photo = $uploaded;
         }
 
-        $user->name = $data['name'];
-        $user->bio = $data['bio'];
-        $user->phone = $data['phone'];
-        $user->email = $data['email'];
-
+        if (!empty($uploaded)) $user->photo = $uploaded;
+        if (!empty($data['name'])) $user->name = $data['name'];
+        if (!empty($data['bio'])) $user->bio = $data['bio'];
+        if (!empty($data['phone'])) $user->phone = $data['phone'];
+        if (!empty($data['email'])) $user->email = $data['email'];
         if (!empty($data['password'])) $user->password = password_hash($data['password'], PASSWORD_DEFAULT);
         
         if (!$user->save()) {
+
             echo json_encode([
                 'status' => false,
                 'error' => [
