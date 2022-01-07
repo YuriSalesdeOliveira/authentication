@@ -452,34 +452,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: relative;
 }
 
-.-bottom-full {
-  bottom: -100%;
-}
-
-.-bottom-\[200px\] {
-  bottom: -200px;
-}
-
-.-bottom-\[200\%\] {
-  bottom: -200%;
-}
-
-.-bottom-\[220\%\] {
-  bottom: -220%;
-}
-
-.-bottom-\[300\%\] {
-  bottom: -300%;
-}
-
-.bottom-\[0\] {
-  bottom: 0;
-}
-
-.bottom-full {
-  bottom: 100%;
-}
-
 .bottom-0 {
   bottom: 0px;
 }
@@ -531,6 +503,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mr-5 {
   margin-right: 1.25rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .flex {
@@ -585,41 +569,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 1300px;
 }
 
+.w-\[190px\] {
+  width: 190px;
+}
+
 .w-\[795px\] {
   width: 795px;
 }
 
 .w-\[70px\] {
   width: 70px;
-}
-
-.w-\[190px\] {
-  width: 190px;
-}
-
-.translate-y-full {
-  --tw-translate-y: 100%;
-  transform: var(--tw-transform);
-}
-
-.translate-y-\[150\%\] {
-  --tw-translate-y: 150%;
-  transform: var(--tw-transform);
-}
-
-.translate-y-\[110\%\] {
-  --tw-translate-y: 110%;
-  transform: var(--tw-transform);
-}
-
-.translate-y-\[120\%\] {
-  --tw-translate-y: 120%;
-  transform: var(--tw-transform);
-}
-
-.translate-y-\[130\%\] {
-  --tw-translate-y: 130%;
-  transform: var(--tw-transform);
 }
 
 .translate-y-\[115\%\] {
@@ -671,6 +630,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-width: 1px;
 }
 
+.border-0 {
+  border-width: 0px;
+}
+
 .border-b {
   border-bottom-width: 1px;
 }
@@ -695,12 +658,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
 
-.p-1 {
-  padding: 0.25rem;
+.bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
-.p-2 {
-  padding: 0.5rem;
+.bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
+.p-1 {
+  padding: 0.25rem;
 }
 
 .px-\[45px\] {
@@ -711,6 +680,26 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-\[40px\] {
   padding-top: 40px;
   padding-bottom: 40px;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .px-12 {
@@ -728,9 +717,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 0.25rem;
 }
 
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .py-5 {
@@ -738,19 +727,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 1.25rem;
 }
 
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-.py-4 {
+.pt-4 {
   padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 
 .text-base {
@@ -813,14 +791,39 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(59 130 246 / var(--tw-text-opacity));
 }
 
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
 .text-\[\#2d9cdb\] {
   --tw-text-opacity: 1;
   color: rgb(45 156 219 / var(--tw-text-opacity));
 }
 
-.text-red-500 {
+.text-gray-900 {
   --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity));
+  color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+
+.text-gray-800 {
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
+}
+
+.text-gray-100 {
+  --tw-text-opacity: 1;
+  color: rgb(243 244 246 / var(--tw-text-opacity));
+}
+
+.text-gray-700 {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+
+.underline {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 
 .shadow-md {
