@@ -22,18 +22,28 @@
                     <img src="assets/images/svg/arrow_drop_down_black_24dp.svg" alt="arrow">
                 </a>
         
-                <nav class="absolute w-[190px] hidden flex-col bottom-0 translate-y-[115%]
-                    px-2 py-4 border rounded-lg shadow-md" id="dropdown-content">
-                    <a href="#" class="text-sm px-5 py-2 bg-gray-300 rounded-lg">My Profile</a>
-                    <a href="#" class="text-sm px-5 py-2 border-b">Group Chat</a>
-                    <a href="javascript:" id="logout" class="text-sm text-red-500 px-5 py-2">Logout</a>
+                <nav class="absolute w-[190px] hidden flex-col text-gray-700 bottom-0 translate-y-[115%]
+                    px-2 pt-4 border rounded-lg shadow-md" id="dropdown-content">
+                    <a href="#" class="flex items-center text-sm px-2 py-3 bg-gray-100 rounded-lg">
+                        <img class="mr-2" src="assets/images/svg/account_circle_black_24dp.svg" alt="">
+                        My Profile
+                    </a>
+                    <a href="#" class="flex items-center text-sm px-2 py-3 border-b">
+                        <img class="mr-2" src="assets/images/svg/people_black_24dp.svg" alt="">
+                        Group Chat
+                    </a>
+                    <a href="javascript:" id="logout"
+                        class="flex items-center text-sm text-red-500 px-2 py-5">
+                        <img class="mr-2" src="assets/images/svg/exit_to_app_black_24dp.svg" alt="">
+                        Logout
+                    </a>
                 </nav>
             </div>
         </div>
 
     </header>
 
-    <main class="mb-12">
+    <main>
         <div class="w-[795px] mx-auto mb-5">
             <a href="javascript:" id="redirect-profile" class="flex items-center text-[#2d9cdb]">
                 <img class="mr-2" src="assets/images/svg/arrow_back_ios_black_24dp.svg" alt="arrow">
@@ -80,6 +90,14 @@
             </form>
         </div>
     </main>
+
+    <footer class="w-[795px] flex justify-between mx-auto text-xs text-gray-500 mt-4 mb-12">
+        <span>
+            created by
+            <a href="https://devchallenges.io/portfolio/YuriSalesdeOliveira" class="underline">Yuri Oliveira</a>
+        </span>
+        <span>devChallenges.io</span>
+    </footer>
 
     <script type="module" src="assets/js/profileEdit.js"></script>
     <script src="assets/js/dropdown.js"></script>
