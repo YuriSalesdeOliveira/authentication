@@ -14,7 +14,7 @@
             <img class="mb-[20px]" src="assets/images/svg/devchallenges.svg" alt="logo">
 
             <div class="relative">
-                <a href="javascript:" class="flex items-center">
+                <a href="javascript:" id="dropdown-button" class="flex items-center">
                     <img class="rounded-lg mr-3" src="assets/images/person4.png" width="35px" alt="person">
         
                     <span class="font-bold text-xs mr-2">Yuri Oliveira</span>
@@ -22,10 +22,21 @@
                     <img src="assets/images/svg/arrow_drop_down_black_24dp.svg" alt="arrow">
                 </a>
         
-                <nav class="absolute hidden">
-                    <a href="#">My Profile</a>
-                    <a href="#">Group Chat</a>
-                    <a href="#">Logout</a>
+                <nav class="absolute w-[190px] hidden flex-col text-gray-700 bottom-0 translate-y-[115%]
+                    px-2 pt-4 border rounded-lg shadow-md" id="dropdown-content">
+                    <a href="#" class="flex items-center text-sm px-2 py-3 bg-gray-100 rounded-lg">
+                        <img class="mr-2" src="assets/images/svg/account_circle_black_24dp.svg" alt="">
+                        My Profile
+                    </a>
+                    <a href="#" class="flex items-center text-sm px-2 py-3 border-b">
+                        <img class="mr-2" src="assets/images/svg/people_black_24dp.svg" alt="">
+                        Group Chat
+                    </a>
+                    <a href="javascript:" id="logout"
+                        class="flex items-center text-sm text-red-500 px-2 py-5">
+                        <img class="mr-2" src="assets/images/svg/exit_to_app_black_24dp.svg" alt="">
+                        Logout
+                    </a>
                 </nav>
             </div>
         </div>
@@ -37,38 +48,49 @@
         <p class="flex justify-center text-base font-light">Basic info, like your name and photo</p>
     </div>
 
-    <main class="w-[795px] mx-auto border rounded-lg overflow-hidden">
-        <header class="w-full h-[100px] flex justify-between items-center px-12 border-b">
-            <div class="flex flex-col">
-                <h3 class="text-xl">Profile</h3>
-                <p class="text-xs text-gray-500 font-medium">Some info may be visible to other people</p>
-            </div>
-            <a href="javascript:" id="redirect-profile-edit"
-                class="flex justify-center items-center text-sm text-gray-500 px-6 py-1 rounded-lg border border-gray-400">Edit</a>
-        </header>
-        <table class="table-profile">
-            <tr>
-                <td>Photo</td><td><img class="rounded-lg" src="assets/images/person4.png" width="75px" alt="person"></td>
-            </tr>
-            <tr>
-                <td>Name</td><td>Xanthe Neal</td>
-            </tr>
-            <tr>
-                <td>BIO</td><td>I am a software developer and a big fan of devchallenges...</td>
-            </tr>
-            <tr>
-                <td>Phone</td><td>908249274292</td>
-            </tr>
-            <tr>
-                <td>Email</td><td>xanthe.neal@gmail.com</td>
-            </tr>
-            <tr>
-                <td>Password</td><td>************</td>
-            </tr>
-        </table>
+    <main>
+        <div class="w-[795px] mx-auto border rounded-lg overflow-hidden">
+            <header class="w-full h-[100px] flex justify-between items-center px-12 border-b">
+                <div class="flex flex-col">
+                    <h3 class="text-xl">Profile</h3>
+                    <p class="text-xs text-gray-500 font-medium">Some info may be visible to other people</p>
+                </div>
+                <a href="javascript:" id="redirect-profile-edit"
+                    class="flex justify-center items-center text-sm text-gray-500 px-6 py-1 rounded-lg border border-gray-400">Edit</a>
+            </header>
+            <table class="table-profile">
+                <tr>
+                    <td>Photo</td><td><img class="rounded-lg" src="assets/images/person4.png" width="75px" alt="person"></td>
+                </tr>
+                <tr>
+                    <td>Name</td><td>Xanthe Neal</td>
+                </tr>
+                <tr>
+                    <td>BIO</td><td>I am a software developer and a big fan of devchallenges...</td>
+                </tr>
+                <tr>
+                    <td>Phone</td><td>908249274292</td>
+                </tr>
+                <tr>
+                    <td>Email</td><td>xanthe.neal@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Password</td><td>************</td>
+                </tr>
+            </table>
+        </div>
     </main>
 
+    <footer class="w-[795px] flex justify-between mx-auto text-xs text-gray-500 mt-4">
+        <span>
+            created by
+            <a href="https://devchallenges.io/portfolio/YuriSalesdeOliveira" class="underline">Yuri Oliveira</a>
+        </span>
+        <span>devChallenges.io</span>
+    </footer>
+
     <script type="module" src="assets/js/profile.js"></script>
+    <script src="assets/js/dropdown.js"></script>
 
 </body>
 </html>
