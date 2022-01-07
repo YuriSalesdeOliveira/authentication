@@ -9,6 +9,5 @@ class User extends Model
         'name' => 'require',
         'email' => 'require',
         'password' => 'require',
-        'is_admin' => 'require'
     ];
 }

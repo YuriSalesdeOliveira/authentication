@@ -27,7 +27,7 @@ abstract class Model
         $this->connection = new Connection();
     }
 
-    public function remove(): bool
+    public function autoRemove(): bool
     {
         if (isset($this->id))
             return $this->delete(['id' => $this->id]);
@@ -35,7 +35,7 @@ abstract class Model
         return false;
     }
 
-    public static function removeByFilters(array $filters): bool
+    public static function remove(array $filters): bool
     {
         return (new static)->delete($filters);
     }
@@ -140,7 +140,7 @@ abstract class Model
         return $instance;
     }
 
-    public function first(): bool|object
+    public function first(): bool|static
     {
         $result = $this->object();
 
