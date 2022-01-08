@@ -34,7 +34,7 @@ photo.addEventListener('change', function() {
         photoPreview.src = reader.result
     }
     // Adicionar filtro para receber somente imagens
-    if (newPhoto) { reader.readAsDataURL(newPhoto)}
+    if (newPhoto) { reader.readAsDataURL(newPhoto) }
 
 })
 

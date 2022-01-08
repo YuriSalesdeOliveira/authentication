@@ -10,8 +10,8 @@ export class AccessControl
     restricted()
     {
         api.get('/login/logged').then(data => {
-
-            if (!data.status) redirect.to('/index.html')
+            console.log(data.status)
+            // if (!data.status) redirect.to('/index.html')
 
         })
     }
