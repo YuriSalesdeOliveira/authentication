@@ -14,16 +14,14 @@ form.addEventListener('submit', function(e) {
     const formData = new FormData(this)
 
     api.post('/login', formData).then(data => {
-        console.log(data)
-        // if (data.status) { redirect.to('/profile.html') }
+        if (data.status) { redirect.to('/profile.html') }
 
-        // const error = data.error
+        const error = data.error
 
-        // if (error.type === 'validation') {
+        if (error.type === 'validation') {
 
-        //     console.log(error.data)
-        // }
-
+            console.log(error.data)
+        }
     })
 
 })

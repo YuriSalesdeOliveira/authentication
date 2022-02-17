@@ -1,13 +1,9 @@
-import { AccessControl } from "./AccessControl.js";
 import { Api } from "./Api.js";
 import { Config } from "./Config.js";
 import { Redirect } from "./Redirect.js";
 
-const accessControl = new AccessControl()
 const redirect = new Redirect(Config.site.root)
 const api = new Api(Config.api.root)
-
-accessControl.restricted()
 
 const buttonBack = document.querySelector('#redirect-profile')
 buttonBack.addEventListener('click', () => {
