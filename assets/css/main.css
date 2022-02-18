@@ -53,5 +53,21 @@ html {
 }
 
 .form-profile-edit > button[type="submit"] {
-    @apply px-5 py-2 text-sm text-white bg-blue-600 mb-12 rounded-md
+    @apply px-5 py-2 text-sm text-white bg-blue-600 mb-12 border rounded-md
+}
+
+.message {
+    @apply text-xs
+}
+
+.message.danger {
+    @apply text-red-600
+}
+
+.message.highlight {
+    @apply flex justify-center text-sm mb-3 py-2 border rounded-md
+}
+
+.message.highlight.danger {
+    @apply border-red-200 bg-red-100
 }

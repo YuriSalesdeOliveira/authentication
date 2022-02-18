@@ -21,9 +21,11 @@
             choose
         </p>
 
+        <span id="login-message" class="message"></span>
+
         <form class="flex flex-col mb-5" action="#" method="post">
 
-            <div class="input w-full mb-3">
+            <div class="input w-full">
                 <input type="email" name="email" id="email" placeholder=" ">
                 <label for="email">
                     <img class="mr-2" src="assets/images/svg/email_black_24dp.svg" alt="email">
@@ -31,7 +33,9 @@
                 </label>
             </div>
 
-            <div class="input w-full mb-5">
+            <span id="email-message" class="message"></span>
+
+            <div class="input w-full mt-3">
                 <input type="password" name="password" id="password" placeholder=" ">
                 <label for="password">
                     <img class="mr-2" src="assets/images/svg/lock_black_24dp.svg" alt="lock">
@@ -39,7 +43,9 @@
                 </label>
             </div>
 
-            <button class="w-full p-1 text-white bg-blue-500 rounded-[10px] hover:bg-blue-600" type="submit">Start coding now</button>
+            <span id="password-message" class="message"></span>
+
+            <button class="w-full p-1 text-white bg-blue-500 rounded-[10px] hover:bg-blue-600 mt-5" type="submit">Start coding now</button>
 
         </form>
 

@@ -5,13 +5,16 @@ export class Api
         this.base_url = base_url
     }
 
-    async get(endpoint)
+    async get(endpoint, myRequest = {})
     {
-        const myRequest = { method: 'GET' }
+        const defaultRequest = { method: 'GET' }
 
         try {
 
-            const reponse = await fetch(this.base_url + endpoint, myRequest)
+            const reponse = await fetch(
+                this.base_url + endpoint,
+                {...defaultRequest, ...myRequest}
+            )
 
             const data = await reponse.json()
 
@@ -22,13 +25,16 @@ export class Api
         }
     }
 
-    async post(endpoint, data)
+    async post(endpoint, myRequest)
     {
-        const myRequest =  { method: 'POST', body: data }
+        const defaultRequest =  { method: 'POST' }
 
         try {
 
-            const reponse = await fetch(this.base_url + endpoint, myRequest)
+            const reponse = await fetch(
+                this.base_url + endpoint,
+                {...defaultRequest, ...myRequest}
+            )
 
             const data = await reponse.json()
 

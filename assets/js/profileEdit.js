@@ -5,6 +5,30 @@ import { Redirect } from "./Redirect.js";
 const redirect = new Redirect(Config.site.root)
 const api = new Api(Config.api.root)
 
+api.get(
+    '/users/authenticate',
+    {
+        headers: {
+            Authorization: window.localStorage.getItem('token')
+        }
+    }
+).then(data => {
+
+    if (!data.status) {
+
+    }
+
+    document.querySelector('#dropdown-photo').src = data.data.user.photo
+    document.querySelector('#dropdown-username').innerHTML = data.data.user.name
+
+    document.querySelector('#form-photo-preview').src = data.data.user.photo
+    document.querySelector('#form-username').value = data.data.user.name
+    document.querySelector('#form-bio').innerHTML = data.data.user.bio
+    document.querySelector('#form-phone').value = data.data.user.phone
+    document.querySelector('#form-email').value = data.data.user.email
+
+})
+
 const buttonBack = document.querySelector('#redirect-profile')
 buttonBack.addEventListener('click', () => {
     redirect.to('/profile.html')
